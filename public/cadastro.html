@@ -125,11 +125,13 @@
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
     var codigoVar = codigo_input.value;
     var idEmpresaVincular;
+    var cpfVar = cpf_input.value;
 
     // Verificando se há algum campo em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
+      cpfVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
       codigoVar == ""
@@ -169,6 +171,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
+        cpfServer: cpfVar,
         idEmpresaVincularServer: idEmpresaVincular,
       }),
     })
