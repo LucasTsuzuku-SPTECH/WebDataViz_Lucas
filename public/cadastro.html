@@ -146,6 +146,31 @@
       setInterval(sumirMensagem, 5000);
     }
 
+    // Verificando se nome tem mais de 1 caractere
+    if (nomeVar.length <= 1) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "(Nome tem que ter mais de 1 caractere)";
+
+      finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Verificando se email contém "@" e "."
+    if (
+      emailVar.indexOf("@") == undefined ||
+      emailVar.indexOf(".") == undefined
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "(Email tem que ter os caracteres '@' e '.')";
+
+      finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
     // Verificando se o código de ativação é de alguma empresa cadastrada
     for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
       if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
