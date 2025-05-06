@@ -22,6 +22,7 @@ CREATE TABLE usuario (
 	nome VARCHAR(50),
 	email VARCHAR(50),
 	senha VARCHAR(50),
+    cpf VARCHAR(15),
 	fk_empresa INT,
 	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
 );
@@ -60,3 +61,5 @@ insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B
 insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
 insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
 insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
+
+SELECT * FROM usuario;
